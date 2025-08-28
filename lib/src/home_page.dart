@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:introducao_flutter_gdg/src/row/row_page.dart';
 import 'package:introducao_flutter_gdg/src/scaffold/scaffold_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -25,6 +26,17 @@ class HomePage extends StatelessWidget {
                 );
               },
               child: const Text('Scaffold'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const RowPage(),
+                  ),
+                );
+              },
+              child: const Text('Row'),
             ),
           ],
         ),
