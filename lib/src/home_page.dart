@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:introducao_flutter_gdg/src/animation/animation_page.dart';
+import 'package:introducao_flutter_gdg/src/onboarding/onboarding_page.dart';
 import 'package:introducao_flutter_gdg/src/stateful/stateful_page.dart';
 import 'package:introducao_flutter_gdg/src/column/column_page.dart';
 import 'package:introducao_flutter_gdg/src/list/list_page.dart';
@@ -85,6 +86,17 @@ class HomePage extends StatelessWidget {
                 );
               },
               child: const Text('Animation'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const OnboardingPage(),
+                  ),
+                );
+              },
+              child: const Text('Onboarding'),
             ),
           ],
         ),
