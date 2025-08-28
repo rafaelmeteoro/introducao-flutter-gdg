@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:introducao_flutter_gdg/src/animation/animation_page.dart';
 import 'package:introducao_flutter_gdg/src/stateful/stateful_page.dart';
 import 'package:introducao_flutter_gdg/src/column/column_page.dart';
 import 'package:introducao_flutter_gdg/src/list/list_page.dart';
@@ -73,6 +74,17 @@ class HomePage extends StatelessWidget {
                 );
               },
               child: const Text('Stateful'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AnimationPage(),
+                  ),
+                );
+              },
+              child: const Text('Animation'),
             ),
           ],
         ),
