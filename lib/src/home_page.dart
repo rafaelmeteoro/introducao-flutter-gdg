@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:introducao_flutter_gdg/src/column/column_page.dart';
+import 'package:introducao_flutter_gdg/src/list/list_page.dart';
 import 'package:introducao_flutter_gdg/src/row/row_page.dart';
 import 'package:introducao_flutter_gdg/src/scaffold/scaffold_page.dart';
 
@@ -49,6 +50,17 @@ class HomePage extends StatelessWidget {
                 );
               },
               child: const Text('Column'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ListPage(),
+                  ),
+                );
+              },
+              child: const Text('List'),
             ),
           ],
         ),
